@@ -1,0 +1,8 @@
+<div class="card-product">
+  <%= image_tag '' %>
+  <div class="card-product-infos">
+  <% @movies.each do |movie| %>
+  <%= movie.title %>
+  <% end %>
+  </div>
+</div>

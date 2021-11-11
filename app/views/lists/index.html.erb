@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>List index</h1>
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <div class="card-product">
+        <div class="card-product-infos">
+          <%= list.name %>
+          <%#= render 'lists/card' %>
+          <%= link_to 'See detail', list_path(list) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to 'NEW LIST', new_list_path %>
+</div>
