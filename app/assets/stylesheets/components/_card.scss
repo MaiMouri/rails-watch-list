@@ -1,6 +1,6 @@
 .card-product {
   overflow: hidden;
-  height: 340px;
+  height: auto;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
@@ -54,6 +54,10 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+}
+
+.overview {
+  height: 120px;
 }
 
 .card-product .card-product-infos {

@@ -10,6 +10,7 @@
           <%# </div> %>
           <%#= render 'lists/card' %>
           <%= link_to 'See detail', list_path(list) %>
+          <%= link_to 'DESTROY IT', list_path(list), method: :delete, data: { confirm: "Are you sure? #{list.name}" } %>
         </div>
       </div>
     <% end %>
