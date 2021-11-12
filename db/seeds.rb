@@ -11,22 +11,19 @@ require 'json'
 # Movie.create(title: "Titanic", overview: "101-year-old Rose DeWitt Bukater tells the story of her life aboard the Titanic.", poster_url: "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg", rating: 7.9)
 # Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal mastermind, gathers a crew of female thieves to pull off the heist of the century.", poster_url: "https://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg", rating: 7.0)
 
-
-# uri = URI.parse('https://api.themoviedb.org/3/movie/550?api_key=8b39435f55406c933c45f5c4305c63b3')
-
 # url = "http://tmdb.lewagon.com/movie/top_rated"
 url = 'http://tmdb.lewagon.com/movie/top_rated?api_key=8b39435f55406c933c45f5c4305c63b3'
-5.times do
-  movies = JSON.parse(open(url).read)['results']
-  puts movies
-  movies.each do |movie|
-    base_url = "https://image.tmdb.org/t/p/original"
-    Movie.create(
-      title: movie['title'],
-      overview: movie['overview'],
-      poster_url: "#{base_url}#{movie['backdrop_path']}",
-      rating: movie['vote_average']
-    )
-  end
+
+movies = JSON.parse(open(url).read)['results']
+puts movies
+movies.each do |movie|
+  base_url = "https://image.tmdb.org/t/p/original"
+  Movie.create(
+    title: movie['title'],
+    overview: movie['overview'],
+    poster_url: "#{base_url}#{movie['backdrop_path']}",
+    rating: movie['vote_average']
+  )
 end
+
 puts "Finished!!"
