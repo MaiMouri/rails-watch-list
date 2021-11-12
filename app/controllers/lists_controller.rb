@@ -1,4 +1,6 @@
 class ListsController < ApplicationController
+  before_action :set_list, only: [:show, :edit, :update, :destroy]
+
   def index
     @lists = List.all
   end
@@ -18,6 +20,15 @@ class ListsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+
+  end
+
+  def update
+    @list.update(list_params)
+    redirect_to list_path(@list)
   end
 
   private

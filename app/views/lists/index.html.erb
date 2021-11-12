@@ -1,20 +1,26 @@
-<div class="container">
-  <h1>List index</h1>
+<h1 class="web-font-bg p-4">MOVIE WATCHLIST</h1>
+<div class="container p-4">
   <div class="cards">
     <% @lists.each do |list| %>
-      <div class="card-product">
-        <div class="card-product-infos">
-          <%# <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<% list.photo.attched ? cl_image_path(list.photo.key, height: 300, crop: :fill) : list.poster_url)"> %>
-          <h2><%= list.name %></h2>
-          <%=  image_tag list.photo if list.photo.attached? %>
-          <%# </div> %>
-          <%#= render 'lists/card' %>
-          <%= link_to 'See detail', list_path(list) %>
-          <%= link_to 'DESTROY IT', list_path(list), method: :delete, data: { confirm: "Are you sure? #{list.name}" } %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : "app/assets/images/test_img.jpeg" %>)">
+          <div class="card-product-infos">
+            <h2><%= list.name %></h2>
+            <div class="button-overlay d-flex justify-content-around align-items-end pb-5">
+            <%= list.movies.count %>
+              <%= link_to list_path(list), class: 'text-white' do %>
+                <i class="fas fa-check"></i> See detail
+              <% end %>
+              <%= link_to list_path(list), method: :delete, data: { confirm: "Are you sure? #{list.name}" } do %>
+              <i class="fas fa-trash"></i>
+              <% end %>
+            </div>
+          </div>
         </div>
-      </div>
     <% end %>
   </div>
-  <%= link_to 'NEW LIST', new_list_path %>
-
+  <div class="py-4">
+    <%= link_to new_list_path, class: 'btn btn-outline-secondary' do %>
+    <i class="fas fa-pencil-alt"></i>  NEW LIST
+    <% end %>
+  </div>
 </div>
