@@ -84,20 +84,21 @@
 }
 
 
-.rating-background:before {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-left: -18px;
-  content: '\f055';
-  color: #e7c552;
-  font-size: 50px;
-  font-family: 'FontAwesome';
-  z-index: -1;
-}
+// .rating-background:before {
+//   position: absolute;
+//   top: 0;
+//   left: 50%;
+//   margin-left: -18px;
+//   content: '\f055';
+//   color: #e7c552;
+//   font-size: 50px;
+//   font-family: 'FontAwesome';
+//   z-index: -1;
+// }
 
 .overview {
-  height: 120px;
+  height: 50px;
+  overflow: hidden;
 }
 
 .card-product .card-product-infos {
