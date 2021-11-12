@@ -1,3 +1,19 @@
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+
 .card-product {
   overflow: hidden;
   height: auto;
@@ -55,6 +71,30 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
+
+.rating-background {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  font-size: 1.6em;
+  background-color: #e7c552;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+
+// .rating-background:before {
+//   position: absolute;
+//   top: 0;
+//   left: 50%;
+//   margin-left: -18px;
+//   content: '\f005';
+//   color: #e7c552;
+//   font-size: 50px;
+//   font-family: 'FontAwesome';
+//   z-index: -1;
+// }
 
 .overview {
   height: 120px;
