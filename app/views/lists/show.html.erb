@@ -1,5 +1,12 @@
 <div class="container">
   <h1><%= @list.name %></h1>
+  <div class="list-content">
+    <% if @list.photo.attached? %>
+      <%= cl_image_tag @list.photo.key, height: 300, crop: :fill %>
+    <% else %>
+  </div>
+    <p>[㊙️DELETE]No photo attached![DELETE]</p>
+  <% end %>
   <div class="cards">
     <% @list.movies.each do |movie| %>
     <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
