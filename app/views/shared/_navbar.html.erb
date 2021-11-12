@@ -1,6 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between mb-3">
   <h1 class="nav-title px-5"><a class="navbar-brand" href="#">Watch list</a></h1>
-  <div class="btn"><%= link_to lists_path do %>
-    <i class="fas fa-film"></i> New Movie
-  <% end %>
+
+  <div class="btn d-flex justify-content-around col-lg-2 col-md-4">
+    <%= link_to lists_path do %>
+      <i class="fas fa-film"></i> My Lists
+    <% end %>
+    <%= link_to new_list_path do %>
+      <i class="fas fa-film"></i> New List
+    <% end %>
+  </div>
 </nav>
