@@ -53,10 +53,10 @@ gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 
 
-gem "select2-rails"
-gem 'shufflejs-rails'
+# gem "select2-rails"
+# gem 'shufflejs-rails'
 
 
-# Cloudinary
-gem 'dotenv-rails', groups: [:development, :test]
-gem 'cloudinary', '~> 1.16.0'
+# # Cloudinary
+# gem 'dotenv-rails', groups: [:development, :test]
+# gem 'cloudinary', '~> 1.16.0'
