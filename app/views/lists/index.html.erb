@@ -8,7 +8,7 @@
             <div class="button-overlay d-flex justify-content-around align-items-end pb-5">
             <%= list.movies.count %>
               <%= link_to list_path(list), class: 'text-white' do %>
-                <i class="fas fa-check"></i> See detail
+                <i class="fas fa-check"></i> See details
               <% end %>
               <%= link_to list_path(list), method: :delete, data: { confirm: "Are you sure? #{list.name}" } do %>
               <i class="fas fa-trash"></i>
